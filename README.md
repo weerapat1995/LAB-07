@@ -322,7 +322,7 @@ namespace Lab7._2
 
 **ผลที่ได้**
 
-![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.1.png?raw=true)
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.1.png)
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
 
@@ -645,7 +645,7 @@ public class intergerTest
 ```
 **CODE
 
-```
+```C#
 using System;
 
 
@@ -710,7 +710,7 @@ namespace LAB7._4
 **ผลที่ได้**
 
 
-![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png?raw=true)
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png)
 
 
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
@@ -772,7 +772,7 @@ Pluto |	5,945,900,000 km | 39.7269996981071 | 331.058330817559
 
 **CODE**
 
-```
+```C#
 using System;
 
 namespace Lab7._5
@@ -850,7 +850,7 @@ namespace Lab7._5
 
 **ผลที่ได้**
 
-![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png?raw=true)
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png)
 
 
 ##คลาส Math 
@@ -911,4 +911,81 @@ The sine of       6.00 = -0.279415         *
 2.	y = cos(x)
 3.	y = tan(x)
 ```
+
+1.y = x^2
+
+```C#
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(i*i) + "*", i, i*i);
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val)+10);
+        return SpaceString;
+    }
+}
+
+```
+
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.4.png)
+
+2. y = cos(x)
+
+```C#
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val*5.0)+10);
+        return SpaceString;
+    }
+}
+
+```
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.5.png)
+
+3.y = tan(x)
+
+```C#
+using System;
+public class MathTest
+{
+    static void Main(string[] args)
+    {
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+        {
+            Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces(Math.Tan(i)) + "*", i, Math.Tan(i));
+        }
+
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', (int)(val)+25);
+        return SpaceString;
+    }
+}
+
+
+
+```
+
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.6.png)
+
 	
