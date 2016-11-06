@@ -322,8 +322,7 @@ namespace Lab7._2
 
 **ผลที่ได้**
 
-```
-```
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.1.png?raw=true)
 
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
 
@@ -644,6 +643,76 @@ public class intergerTest
 9.	y%8
 10.	100*x+y%2-a
 ```
+**CODE
+
+```
+using System;
+
+
+namespace LAB7._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Double a = 10, b = 20 , x = 5 , y = 2;
+                    
+            Console.WriteLine("a = 10, b = 20, x = 5, y = 2");
+            Console.WriteLine("--------------------------");
+
+            Console.Write("a+b = {0} + {1}", a , b);
+            Console.WriteLine(" = {0}", a + b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("x-b = {0} - {1}", x , b);
+            Console.WriteLine(" = {0}", x - b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("x*b = {0} * {1}", x , b);
+            Console.WriteLine(" = {0}", x * b);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y/a = {0} / {1}", y , a);
+            Console.WriteLine(" = {0}", y / a);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("b%y = {0} % {1}", b , y);
+            Console.WriteLine(" = {0}", b % y);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y+10%x  = {0} + 10 % {1}", y , x);
+            Console.WriteLine("  = {0}", y + 10 % x);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("a/3*5 = {0} / 3 * 5", a);
+            Console.WriteLine(" = {0}", a / 3 * 5);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("9/2*a = 9 / 2 * {0}", a);
+            Console.WriteLine(" = {0}", 9 / 2 * a);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("y%8 = {0} % 8", y);
+            Console.WriteLine(" = {0}", y % 8);
+            Console.WriteLine("--------------------------");
+
+            Console.Write("100*x+y%2-a = 100 * {0} + {1} % 2 - {2}", x , y , a);
+            Console.WriteLine(" = {0}", 100 * x + y % 2 - a);
+            Console.WriteLine("--------------------------");
+
+
+        }
+    }
+}
+
+```
+
+**ผลที่ได้**
+
+
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png?raw=true)
+
+
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
 
@@ -692,14 +761,97 @@ SunToEarthTimeOfLight = 8.33333333333333 minutes
 
 ดาวเคราะห์ | ระยะทางจากดวงอาทิตย์ | ระยะทางในหน่วย A.U. | เวลาของแสง (นาที)
 :----:|:----:|:----:|:----: 
-Mercury |	57,910,000 km		
-Venus |	108,200,000 km		
-Earth |	149,600,000 km		
-Mars |	227,940,000 km		
-Jupiter |	778,330,000 km		
-Uranus |	2,873,550,000 km		
-Neptune |	4,501,000,000 km		
-Pluto |	5,945,900,000 km		
+Mercury | 57,910,000 km	| 0.386920491854452 | 3.22433743212043
+Venus |	108,200,000 km | 0.722928634409457 | 6.02440528674548
+Earth |	149,600,000 km | 0.999539036115109 | 8.32949196762591
+Mars |	227,940,000 km | 1.5229607479417 | 12.6913395661808
+Jupiter | 778,330,000 km | 5.20034236617295 | 43.3361863847746	
+Uranus | 2,873,550,000 km | 19.1993676285332 | 159.994730237777
+Neptune | 4,501,000,000 km | 30.0730294221531 |	250.608578517943
+Pluto |	5,945,900,000 km | 39.7269996981071 | 331.058330817559
+
+**CODE**
+
+```
+using System;
+
+namespace Lab7._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;
+            const double Astronomicalunit = 93000000d;
+            const double mileTokm = 1.609344;
+
+            Console.WriteLine("Mercury");
+            const double mercury = 57910000d;
+            Console.WriteLine("lengthtosun : {0} km" , mercury/mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (mercury / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((mercury / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Venus");
+            const double Venus = 108200000d;
+            Console.WriteLine("lengthtosun : {0} km", Venus / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Venus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Venus / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Earth");
+            const double Earth = 149600000d;
+            Console.WriteLine("lengthtosun : {0} km", Earth / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Earth / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Earth / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Mars");
+            const double Mars = 227940000d;
+            Console.WriteLine("lengthtosun : {0} km", Mars / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Mars / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Mars / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Jupiter");
+            const double Jupiter = 778330000d;
+            Console.WriteLine("lengthtosun : {0} km", Jupiter / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Jupiter / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Jupiter / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Uranus");
+            const double Uranus = 2873550000d;
+            Console.WriteLine("lengthtosun : {0} km", Uranus / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Uranus / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Uranus / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Neptune");
+            const double Neptune = 4501000000d;
+            Console.WriteLine("lengthtosun : {0} km", Neptune / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Neptune / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Neptune / mileTokm) / lightSpeed) / 60);
+
+            Console.WriteLine("\n----------------------------------\n");
+            Console.WriteLine("Pluto");
+            const double Pluto = 5945900000d;
+            Console.WriteLine("lengthtosun : {0} km", Pluto / mileTokm);
+            Console.WriteLine("Astronomicalunit : {0} A.U.", (Pluto / mileTokm) / Astronomicalunit);
+            Console.WriteLine("Light Speed : {0} minutes", ((Pluto / mileTokm) / lightSpeed) / 60);
+
+            
+
+        }
+    }
+}
+
+```
+
+**ผลที่ได้**
+
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png?raw=true)
+
 
 ##คลาส Math 
 ในภาษา C# มีคลาสที่เป็นตัวช่วยคำนวณทางคณิตศาสตร์ ที่ช่วยให้เราสามารถคำนวณฟังก์ชันพื้นฐานได้ อย่างรวดเร็ว ไม่ต้องพัฒนาโปรแกรมเพิ่มเติมด้วยเอง นั่นคือคลาส Math  ฟังก์ชันทางคณิตศาสตร์ที่ใช้บ่อยๆ สามารถดูรายละเอียดทั้งหมดได้จาก 
