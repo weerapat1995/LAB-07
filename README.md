@@ -710,7 +710,7 @@ namespace LAB7._4
 **ผลที่ได้**
 
 
-![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.3.png)
+![](https://github.com/weerapat1995/LAB-07/blob/master/imgs/7.2.png)
 
 
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
